@@ -6,9 +6,10 @@ type Model =
   { Count: int
     StepSize: int }
 
-let init () =
-  { Count = 0
-    StepSize = 1 }
+let init () = {
+    Count = 0
+    StepSize = 1
+}
 
 type Msg =
   | Increment

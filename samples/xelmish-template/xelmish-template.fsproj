@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>xelmish_template</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Program.fs" />
+        <Content Include="content\obj\DesktopGL\Content\SourceCodePro.mgcontent" />
+        <Content Include="content\obj\DesktopGL\Content\.mgcontent" />
+        <Content Include="content\bin\DesktopGL\Content\SourceCodePro.xnb" />
+        <Content Include="content\SourceCodePro.spritefont" />
+        <Content Include="content\SourceCodePro-Semibold.ttf" />
+        <Content Include="content\Content.mgcb" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="content\*">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <MonoGameContentReference Include="**\*.mgcb" />
+    </ItemGroup>
+    <ItemGroup />
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Xelmish.fsproj" />
+        <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.4" />
+        <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.7.0.7" />
+    </ItemGroup>
+
+</Project>
