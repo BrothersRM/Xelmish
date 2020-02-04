@@ -72,6 +72,12 @@ let onclickpoint event =
         && inputs.lastMouseState.LeftButton <> ButtonState.Pressed then
             event (inputs.mouseState.X, inputs.mouseState.Y))
 
+let whileclickpoint event =
+    onupdate (fun inputs ->
+        if inputs.mouseState.LeftButton = ButtonState.Pressed
+        && inputs.lastMouseState.LeftButton = ButtonState.Pressed then
+            event (inputs.mouseState.X, inputs.mouseState.Y))
+
 /// Run the given event if the given key has just been pressed
 let onkeydown key event =
     onupdate (fun inputs -> 
